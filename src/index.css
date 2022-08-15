@@ -1,0 +1,543 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+
+.header {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 45px;
+}
+
+.header_list img {
+  width: 90px;
+}
+
+.header_search{
+  display: flex;
+}
+
+.header_search input{
+  padding: 7px;
+  border-radius: 18px;
+  color: #fff;
+}
+
+.header_search img{
+  width: 30px;
+  margin: 0px 15px;
+}
+
+/*Main Poster*/
+
+.moviesSide{
+  position: relative;
+
+}
+
+
+/*Movies Section*/
+
+.ulMain{
+  display: flex;
+  position: relative;
+  padding: 5px 0px;
+
+  width: 92vw;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  align-content: center;
+  margin: 0px 50px;
+  scroll-behavior: smooth;
+}
+
+/*Movies and Header of the category*/
+
+li{
+  list-style: none;
+}
+
+li img{
+  margin-right: 12px;
+  width: 200px;
+  height: 300px;
+  transition: 1s;
+}
+
+li img:hover{
+  margin-right: 10px;
+  width: 220px;
+  height: 320px;
+}
+
+
+h3{
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  margin-left: 55px;
+}
+
+
+/*Button Section 1*/
+
+button{
+  height: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button .ArrowLeft{
+  height: 30px;
+  position: absolute;
+  bottom: 160px;
+  left: 7px;
+  transform-origin: center;
+  transition: .5s;
+}
+
+button .ArrowLeft:hover{
+  height: 35px;
+}
+
+button .ArrowR{
+  height: 30px;
+  position: absolute;
+  bottom: 160px;
+  right: 7px;
+  transform-origin: center;
+  transition: .5s;
+}
+
+button .ArrowR:hover{
+  height: 35px;
+}
+
+
+/*If ModalSearch is true*/
+
+.hideModal{
+  visibility: hidden;
+}
+
+
+
+.ulSearch{
+  display: flex;
+  padding: 0px 0px;
+
+  flex-wrap: wrap;
+
+  align-content: center;
+  margin-left: 35px;
+}
+
+/*****     Modal     *****/
+
+.modal {
+  display: flex;
+  z-index: 20;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.014);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal img{
+  width: 250px;
+}
+
+.modal p{
+  color: #fff;
+  background-color: grey;
+  border-radius: 5px;
+  width: 114px;
+  height: 25px;
+  padding-top: 4px;
+  text-align: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.modal h4{
+  padding-right: 300px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.modal .buttons{
+  padding-top: 40px;
+}
+
+.modal button{
+  font-size: 20px;
+  margin-right: 30px;
+  color: #fff;
+  border: 2px #fff solid ;
+  width: 220px;
+  height: 50px;
+
+}
+
+.modal .text{
+  color: #fff;
+  padding-left: 100px;
+}
+
+
+.modal .info_completa{
+  display: flex;
+  padding: 70px;
+}
+
+.modal .extra_info{
+  display: flex;
+  padding-top: 25px;
+}
+
+.modal .close-modal {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  width: 2rem;
+  height: 2rem;
+}
+.modal .close-modal img {
+  width: 80%;
+}
+
+/*MediaQuerys 1135px*/
+
+@media only screen and (max-width: 1135px) {
+
+/*Main Poster*/
+
+.moviesSide{
+  position: relative;
+  padding: 0px 20px;
+}
+
+
+/*Movies Section*/
+
+.ulMain{
+  flex-wrap: wrap;
+}
+
+/*Movies and Header of the category*/
+
+
+li img{
+  width: 210px;
+  height: 300px;
+  margin-right: 25px;
+}
+
+li img:hover{
+  width: 220px;
+  height: 310px;
+}
+
+
+/*Button Section 1*/
+
+
+button .ArrowLeft{
+  display: none;
+}
+
+button .ArrowR{
+  display: none;
+}
+
+
+/*If ModalSearch is true*/
+
+.hideModal{
+  visibility: hidden;
+}
+
+/*****     Modal     *****/
+
+.modal {
+  position: fixed;
+}
+
+.modal h4{
+  padding-right: 20px;
+  margin-top: 30px;
+}
+
+.modal button{
+  margin-right: 20px;
+  width:180px;
+}
+
+}
+
+/*MediaQuerys 1019px*/ /*Next 921*/
+
+@media only screen and (max-width: 1019px) {
+
+  /*Movies Section*/
+
+    .ulMain{
+      flex-wrap: wrap;
+    }
+  
+  /*Main Poster*/
+  
+  .moviesSide{
+    position: relative;
+    padding: 0px 20px;
+  }
+  
+  /*Movies and Header of the category*/
+  
+  
+  li img{
+    width: 190px;
+    height: 280px;
+  }
+  
+  li img:hover{
+    width: 220px;
+    height: 310px;
+  }
+  
+  .modal .text{
+    padding-left: 20px;
+  }
+  
+  .modal .info_completa{
+    padding: 50px;
+  }
+
+  .modal img{
+    width: 180px;
+  }
+
+  .modal h4{
+    font-size: 13px;
+  }
+  }
+
+  @media only screen and (max-width: 769px) {
+
+    .header {
+      display: flex;
+      position: fixed;
+      z-index: 10;
+      width: 100vw;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 45px;
+    }
+    
+    .header_list img {
+      width: 80px;
+    }
+    
+    .header_search{
+      display: flex;
+    }
+    
+    .header_search input{
+      padding: 7px;
+      width: 120px;
+      border-radius: 18px;
+      color: #fff;
+    }
+    
+    .header_search img{
+      width: 30px;
+      margin: 0px 15px;
+    }
+
+/*Main Poster*/
+
+.moviesSide{
+  position: relative;
+  padding: 0px 0.5px;
+}
+
+/*Movies and Header of the category*/
+
+
+li img{
+  width: 180px;
+  height: 270px;
+  margin-right: 10px;
+}
+
+li img:hover{
+  width: 210px;
+  height: 300px;
+}
+
+  /*Button Section 1*/
+    
+    button .ArrowLeft{
+      display: none;
+    }
+    
+    button .ArrowR{
+      display: none;
+    }
+    
+    
+    /*If ModalSearch is true*/
+    
+    .hideModal{
+      visibility: hidden;
+    }
+    
+    /*****     Modal     *****/
+
+    .modal {
+      z-index: 20;
+    }
+    
+    .modal img{
+      display: block;
+      margin: auto;
+      width: 150px;
+    }
+    
+    .modal p{
+      border-radius: 5px;
+      width: 110px;
+      height: 25px;
+      padding-top: 2px;
+      margin-right: 10px;
+    }
+
+    .modal h1{
+      text-align: center;
+      padding-top: 8px;
+      font-size: 1.5rem;
+    }
+    
+    .modal h4{
+      padding-right: 30px;
+      font-size: 15px;
+      margin-top: 15px;
+      color: #fff;
+    }
+    
+    .modal .buttons{
+      padding-top: 20px;
+    }
+    
+    .modal button{
+      font-size: 18px;
+      margin-right: 20px;
+      width: 140px;
+      height: 45px;
+    }
+    
+    .modal .text{
+      padding-left: 20px;
+    }
+    
+    
+    .modal .info_completa{
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+    }
+    
+    .modal .extra_info{
+      display: flex;
+      padding-top: 25px;
+    }
+    }
+
+    @media only screen and (max-width: 769px) {
+
+      .header {
+        padding: 25px 20px;
+      }
+
+      .header_search input{
+        width: 110px;
+      }
+      
+      .header_search img{
+        width: 30px;
+        margin: 0px 10px;
+      }
+  
+  /*Main Poster*/
+  
+  .moviesSide{
+    position: relative;
+    padding: 0px 0px;
+    margin-left: 5px;
+  }
+  
+  /*Movies and Header of the category*/
+  
+  
+  li img{
+    width: 150px;
+    height: 250px;
+    margin-right: 8px;
+  }
+  
+  li img:hover{
+    width: 160px;
+    height: 260px;
+  }
+      
+      /*****     Modal     *****/
+  
+      .modal {
+        z-index: 20;
+      }
+      
+      .modal img{
+        display: block;
+        margin: auto;
+        width: 180px;
+      }
+      
+      .modal p{
+        font-size: 12px;
+        width: 90px;
+      }
+  
+      .modal h1{
+        font-size: 1.5rem;
+      }
+      
+      .modal button{
+        width: 120px;
+      }
+      
+      .modal .text{
+        text-align: center;
+      }
+      
+      }
+
+
+
+
+
+
+
+
+
+
